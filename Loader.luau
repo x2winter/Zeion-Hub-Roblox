@@ -66,12 +66,14 @@ local lists = {
     [113290951185459] = "Anime-dice",
 }
 
-local name = lists[game.GameId]
+local name = lists[game.PlaceId] or lists[game.GameId]
 
 if name then
     loadstring(game:HttpGet(
         "https://raw.githubusercontent.com/x2winter/Zeion-Hub-Roblox/refs/heads/main/" .. name .. ".luau"
     ))()
 else
-    LocalPlayer:Kick("This game is not supported")
+    LocalPlayer:Kick(
+        "This game is not supported\nPlaceId: " .. game.PlaceId .. "\nGameId: " .. game.GameId
+    )
 end
