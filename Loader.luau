@@ -1,13 +1,76 @@
-local Scripts = {
-    [537413528] = "https://raw.githubusercontent.com/x2winter/Zeion-Hub-Roblox/refs/heads/main/Build-a-boat.luau",
-    [3101667897] = "https://raw.githubusercontent.com/x2winter/Zeion-Hub-Roblox/refs/heads/main/Legends-of-speed.luau",
-    [3956818381] = "https://raw.githubusercontent.com/x2winter/Zeion-Hub-Roblox/refs/heads/main/Ninja-Legends.luau"
+print([[
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                   ..........                                       
+                                          ...        .:.::...                                       
+                                          ....       ........                                       
+                                         ....:.     .:....::.                                       
+                                        .:....:.   .:....::.                                        
+                                 ....:-+==:. .::. .::...::.                                         
+                          ..:=*%@@@@@@@#**@@%%##*++==:::::.....                                     
+                           ..:-*#%%%@@%*+%@@@@@@@@@@@@@@@@@@@@@@%%#*=.                              
+                                   ..=*+#%@@@@@@@@@@@@@@@@@@@@@@@@%#.                               
+                                     .:-*%%%%%%%%%%@@@@%%%%%%%%%%%* ...::...                        
+                                    .::.  :-:.:*%%%%%@@%%%%%%%%%%-..--====+-.                       
+                                   .:-:. .:=. .+@@%%#=:..#%%@@@%:  :====+++*:.                      
+                                   .=:.  ::-  .+%@@@%#**%%%@@@#:   -==+++**#:.                      
+                                  .-::   :-:  .*%%@@@@@@%%@@@@-    .=++**##=.                       
+                               ...:--.  :***=::*%%@@%%%%%%@@@#:      .:--:.                         
+                        .=#%@@@@@@++=-::-:=*%@@@@@@+:*%%%%%%%@%%*=:.       .+=                      
+                           ..+%%%@@@@%%*:::..-#%@@@=:.-##*=:....        .:-#%.                      
+                             .+%%%@@@@#*%%*:  ..=%@=-%=.             .:+%@%@:.                      
+                              .*%%%%@@@%=.-*#+.  .::-%@#--==**#%%%%@@@@@@%%+.                       
+                               .#%%%%%%@@=. ..:=-. .+#@%%%@@@@@@%%@@%%@@*:..                        
+                         ...:::-===-::.....     .:=#%%%%##%%%#%%%%%@@@@#:                           
+                        ..:+%%@@@@@@@@@%%#=:.   .-+***%%#***+=-::::::::.                            
+                            ..:+#%%%%@@@@@@@@#=.   .....                                            
+                                ..:=#%%%%@@@%%%@%%%%%=.:                                            
+                                    .:+%%%%%%%@@@@@@@@@#                                            
+                                      .:*%%%%%%%%%%@@@@%.                                           
+                                         ..::-+*#%%%@@@@****-                                       
+                                                .:+%%%@@@@@@+.                                      
+                                                   .-#%%%%@@*.                                      
+                                                     .:=%%%@#:                                      
+                                                        .:+%%-                                      
+                                                           .::                                      
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+]])
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local lists = {
+    [537413528] = "Build-a-boat",
+    [3101667897] = "Legends-of-speed",
+    [3956818381] = "Ninja-Legends",
 }
 
-local url = Scripts[game.PlaceId]
+local name = lists[game.GameId]
 
-if url then
-    loadstring(game:HttpGet(url))()
+if name then
+    loadstring(game:HttpGet(
+        "https://raw.githubusercontent.com/x2winter/Zeion-Hub-Roblox/refs/heads/main/" .. name .. ".luau"
+    ))()
 else
-    warn("No Script Found For Map ID:", game.PlaceId)
+    LocalPlayer:Kick("This game is not supported")
 end
