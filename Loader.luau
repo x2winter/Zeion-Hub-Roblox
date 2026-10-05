@@ -60,9 +60,6 @@ local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
 local lists = {
-    [537413528] = "Build-a-boat",
-    [3101667897] = "Legends-of-speed",
-    [3956818381] = "Ninja-Legends",
     [113290951185459] = "Anime-dice",
 }
 
