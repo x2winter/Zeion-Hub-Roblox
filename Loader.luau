@@ -61,6 +61,7 @@ local LocalPlayer = Players.LocalPlayer
 
 local lists = {
     [113290951185459] = "Anime-dice",
+    [118805555015549] = "Loot-to-forge",
 }
 
 local name = lists[game.PlaceId] or lists[game.GameId]
